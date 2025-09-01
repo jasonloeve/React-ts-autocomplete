@@ -1,0 +1,17 @@
+export const languages = [
+  "Javascript",
+  "Typescript",
+  "Python",
+  "Java",
+  "C#",
+  "C++",
+  "Go",
+  "Rust",
+  "Ruby",
+  "PHP",
+  "Swift",
+  "Kotlin",
+  "Scala",
+  "Elixir",
+  "Haskell",
+];

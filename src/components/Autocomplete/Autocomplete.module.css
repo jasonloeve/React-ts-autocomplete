@@ -1,0 +1,112 @@
+.container {
+    position: relative;
+    width: 250px; /* @NOTE - Set to 100% then control width from a parent container if needed */
+}
+
+.holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 8px;
+    margin: 0 0 8px 0;
+}
+
+.inputWrapper {
+    position: relative; /* @NOTE - Needed for suffix icons to be absolutely positioned */
+}
+
+.label {
+    font-family: 'Arial', serif;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 50px 12px 12px; /* @NOTE - Right padding allows space for suffix (search & clear icons) */
+    gap: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #9F9F9F;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #4B98BE;
+    filter: drop-shadow(0px 0px 6px #488BD2); /* @NOTE - subtle glow effect to indicate focus */
+}
+
+.suffix {
+    position: absolute; /* @NOTE - positioned at the end of input */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    top: 0;
+    right: 10px;
+    height: 100%; /* @NOTE - fills input height */
+}
+
+.clear {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0; /* @NOTE - tight click area around the X */
+}
+
+::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    color: #9F9F9F;
+}
+
+.dropdown {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    position: absolute;
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 100; /* @NOTE - ensures dropdown appears above other elements */
+}
+
+.option {
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* @NOTE - I haven't bolded the font on hover as this is an awkward effect that looks like a shift issue. */
+.option:hover,
+.highlighted {
+    background-color: #EAEAEA;
+    color: #4B98BE;
+}
+
+.loading,
+.noResults {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px; /* @NOTE - ample space for "Loading..." or "No results" messages */
+}

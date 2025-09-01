@@ -1,0 +1,16 @@
+html {
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: antialiased;
+  font-family: 'Arial', serif;
+  color: #4F4F4F;
+  font-size: 14px;
+}
